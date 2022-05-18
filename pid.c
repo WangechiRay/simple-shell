@@ -14,7 +14,7 @@ int main(void)
         pid_t cpid, ppid;
 
         cpid = getpid();
-        ppid = getpid();
+        ppid = getppid();
 
         printf("cpid:%u\n ppid:%u\n", cpid, ppid);
         return (0);
