@@ -11,11 +11,12 @@
 
 int main(void)
 {
-        pid_t cpid, ppid;
+	pid_t pid, ppid;
 
-        cpid = getpid();
-        ppid = getppid();
+	pid = getpid();
+	ppid = getppid();
 
-        printf("cpid:%u\n ppid:%u\n", cpid, ppid);
-        return (0);
+	printf("pid:%u\n ppid:%u\n", pid, ppid);
+
+	return (0);
 }
