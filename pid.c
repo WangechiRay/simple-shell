@@ -11,12 +11,14 @@
 
 int main(void)
 {
-	pid_t pid, ppid;
+	pid_t ppid;
+	pid_t pid;
 
 	pid = getpid();
 	ppid = getppid();
 
-	printf("pid:%u\n ppid:%u\n", pid, ppid);
+	printf("program processing ID is %u\n", pid);
+	printf("It's parent id is %u\n", ppid);
 
 	return (0);
 }
