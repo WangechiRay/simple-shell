@@ -2,7 +2,6 @@
 #include <unistd.h>
 #include <stdlib.h>
 
-
 /**
  * main- writes UNIX command line interpreter.
  *
@@ -11,18 +10,17 @@
 
 int main(void)
 {
+	char *buff;
+	size_t size = 10;
 
-        char *buff;
-        size_t size = 10;
+	buff = malloc(sizeof(char) * size);
 
-        buff = malloc(sizeof(char) * size);
+	printf("#cisfun$ ");
+	getline(&buff, &size, stdin);
 
-        printf("#cisfun$ ");
-        getline(&buff, &size,stdin);
+	printf("%s\n", buff);
 
-        printf("%s\n", buff);
-        free(buff);
+	free(buff);
 
-        return (0);
+	return (0);
 }
-
